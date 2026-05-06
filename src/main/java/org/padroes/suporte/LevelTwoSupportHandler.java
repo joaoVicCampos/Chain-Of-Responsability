@@ -8,11 +8,7 @@ public class LevelTwoSupportHandler extends SupportHandler {
     }
 
     @Override
-    protected void process(SupportRequest request) {
-        System.out.println("✅ [NÍVEL 2 - Técnico de Suporte]");
-        System.out.println("   Processando: " + request);
-        System.out.println("   Ação: Analisando logs e reproduzindo erro...");
-        System.out.println("   Status: Ticket aberto para investigação");
-        System.out.println();
+    protected String process(SupportRequest request) {
+        return "Técnico de Suporte";
     }
 }

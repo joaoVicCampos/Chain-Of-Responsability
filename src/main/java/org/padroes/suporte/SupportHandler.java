@@ -8,18 +8,18 @@ public abstract class SupportHandler {
         this.nextHandler = nextHandler;
     }
 
-    public void handle(SupportRequest request) {
+    public String handle(SupportRequest request) {
         if (canHandle(request)) {
-            process(request);
+            return process(request);
         } else if (nextHandler != null) {
-            nextHandler.handle(request);
+            return nextHandler.handle(request);
         } else {
-            System.out.println("❌ Nenhum handler conseguiu resolver: " + request.getDescription());
+            return "Sem atendimento";
         }
     }
 
     protected abstract boolean canHandle(SupportRequest request);
 
-    protected abstract void process(SupportRequest request);
+    protected abstract String process(SupportRequest request);
 }
 

@@ -8,11 +8,7 @@ public class LevelThreeSupportHandler extends SupportHandler {
     }
 
     @Override
-    protected void process(SupportRequest request) {
-        System.out.println("✅ [NÍVEL 3 - Engenheiro de Suporte]");
-        System.out.println("   Processando: " + request);
-        System.out.println("   Ação: Ativando equipe de infraestrutura...");
-        System.out.println("   Status: Iniciando diagnóstico em tempo real");
-        System.out.println();
+    protected String process(SupportRequest request) {
+        return "Engenheiro de Suporte";
     }
 }

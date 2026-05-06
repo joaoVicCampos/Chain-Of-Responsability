@@ -8,12 +8,8 @@ public class LevelOneSupportHandler extends SupportHandler {
     }
 
     @Override
-    protected void process(SupportRequest request) {
-        System.out.println("✅ [NÍVEL 1 - Assistente de Suporte]");
-        System.out.println("   Processando: " + request);
-        System.out.println("   Resposta: Consultando base de conhecimento...");
-        System.out.println("   Status: Resolvido com FAQ ou tutorial");
-        System.out.println();
+    protected String process(SupportRequest request) {
+        return "Assistente de Suporte";
     }
 }
 
